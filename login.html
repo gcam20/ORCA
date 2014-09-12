@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Login | ORCA</title>
+	<link rel="stylesheet" type="text/css" href="view.css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+
+	<!-- JAVASCRIPT FUNCTIONALITY -->
+	<script type="text/javascript" src="login.js"></script>
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+	<script type="text/javascript" src="databaseController.js"></script>
+
+<!-- HTML MARKUP -->
+</head>
+
+<body id="main_body" >
+	<div id="greeting_container">
+		<img src="img/orca_whale.png" alt="orca_whale" height="56px"/>
+		<img src="img/orca_text.png" alt="orca_whale" height="59px"/>
+		<div class="login_container">
+			<div class="login_greeting_container">
+				<label class="login_greeting_1">Welcome to ORCA!</label><br>
+				<label class="login_greeting_2">Please enter your login information below.</label>
+			</div>
+			<div class="login_divider"></div>
+			<div class="login_input_container">
+				<label class="login_text_1">Username: </label>
+				<input id="username_input" type="text" size="30" /><br>
+				<label class="login_text_2">Password: </label>
+				<input id = "password_input" type="password" size="30" />
+			</div>
+			<div class="login_divider"></div>
+			<div class="login_btn_container">
+				<button onclick="return loginClick()">Log In</button>
+				<button onclick="return cancelClick()">Cancel</button>
+			</div>
+			<div class="forgot_container">
+				<a href="welcome.html">Forgot password?</a>
+			</div>
+		</div>
+		<div id="footer">
+			ORCA: Optimized Retail Contextual Advertising
+		</div>
+	</div>
+</body>
+
+</html>

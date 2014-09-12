@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Profile | Orca</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+
+<!-- JAVASCRIPT FUNCTIONALITY -->
+<script type="text/javascript" src="profile.js"></script>
+<script type="text/javascript" src="logout.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+<script type="text/javascript" src="databaseController.js"></script>
+
+<script type="text/javascript">
+	loadUser(window.name);
+</script>
+
+<!-- HTML MARKUP -->
+</head>
+<body id="main_body" >
+	<div id="form_container">
+	
+		<h1>
+			<a>
+				<span class="logo_container">
+					<img id="logoWhaleImg" src="img/orca_whale.png" onclick="return logoClick()" alt="ORCA_whale" height="30px"/> 
+					<img id="logoTextImg" src="img/orca_text.png" onclick="return logoClick()" alt="ORCA" height="33px" align="top"/>
+				</span>
+				<span class="logout_container_span">
+					<a class="logout_container" onclick="return logout()">LOG OUT</a>
+				</span>
+			</a>
+		</h1>
+		
+
+		<form id="page" class="appnitro"  method="post" action="">
+
+			<div class="profile_pane_container">
+				<div class="profile_pane">
+					<div class="edit_profile_top">
+						<button class="edit_profile_btn" onclick="return psClick();">
+							<img class="settings_icon" src="img/settings_gear.png" width="15px" alt="settings_gear"/>
+							<label>EDIT PROFILE</label>
+						</button>
+					</div>
+					<div class="profile_pane_content">
+						<img class="profile_pic" src="img/default-avatar.png" alt="dvs_profile_pic" height="120px"/><br><br>
+						<label id="welcome_message">Welcome!</label><br><br>
+						<div class="btn_pane_container">
+							<button class="profile_btn" onclick="return aniClick();">ADD NEW ITEM</button><br><br>
+							<button class="profile_btn" onclick="return mlClick();">MANAGE LISTED ITEMS</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</form>	
+		<div id="footer">
+			ORCA: Optimized Retail Contextual Advertising
+		</div>
+	</div>
+	</body>
+</html>

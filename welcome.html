@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ORCA</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+
+<!-- JAVASCRIPT FUNCTIONALITY -->
+<script type="text/javascript" src="welcome.js"></script>
+<script type="text/javascript" src="transitions.js"></script>
+<script type="text/javascript">
+	runTransitions();
+</script>
+
+
+<!-- HTML MARKUP -->
+</head>
+<body id="main_body" >
+	<div id="greeting_container">
+		<div class="welcome_logo_container">
+			<img src="img/orca_whale.png" alt="orca_whale" height="56px"/>
+			<img src="img/orca_text.png" alt="orca_whale" height="59px"/>
+		</div>
+		<span class="already_member">
+			<a href="login.html">Already a member?</a>	
+		</span>
+		<div class="slideshow_container">
+			<img src="img/welcome3_text.jpg" class="slideshow_pic" alt="slideshow_pic" id="slideshow_pic" onclick="return pictureClick()" height="450px"/>
+			<span class="helper"></span>
+		</div>
+		<div id="footer">
+			ORCA: Optimized Retail Contextual Advertising
+		</div>
+	</div>
+	</body>
+</html>

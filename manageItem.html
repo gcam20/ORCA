@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Manage Item | ORCA</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+
+<!-- JAVASCRIPT FUNCTIONALITY -->
+<!-- <script type="text/javascript" src="item.js"></script> -->
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="validations.js"></script>
+<script type="text/javascript" src="databaseController.js"></script>
+<script type="text/javascript" src="getColor.js"></script>
+<script type="text/javascript" src="logout.js"></script>
+
+<script type="text/javascript">
+	getCategories();
+	loadItem();
+
+	function logoClick() 
+	{
+		window.location.href = "profile.html";
+		return false;
+	}
+
+	function submitClick() 
+	{
+		window.location.href = "manage.html";
+		return false;
+	}
+</script>
+
+
+<!-- HTML MARKUP -->
+</head>
+<body id="main_body" >
+	<div id="form_container">
+	
+		<h1>
+			<a>
+				<span class="logo_container">
+					<img id="logoWhaleImg" src="img/orca_whale.png" onclick="return logoClick()" alt="ORCA_whale" height="30px"/> 
+					<img id="logoTextImg" src="img/orca_text.png" onclick="return logoClick()" alt="ORCA" height="33px" align="top"/>
+				</span>
+				<span class="logout_container_span">
+					<a class="logout_container" onclick="return logout()">LOG OUT</a>
+				</span>
+			</a>
+		</h1>
+
+		<form id="page" class="appnitro"  method="post" action="">
+			<div class="form_description">
+				<h2>Manage Item</h2>
+				<p>Please edit your item below.</p>
+			</div>						
+			<ul >
+
+				<table>
+
+					<!-- BRAND -->
+					<tr id="brandCol">
+						<td class="leftCol">
+							<label class="brand">Brand: </label>
+						</td>
+
+						<td class="rightCol">
+							<input id="brandInput" type="text" />
+						</td>
+					</tr>
+
+					<!-- TITLE -->
+					<tr id="titleCol">
+						<td class="leftCol">
+							<label class="title">Title: </label>
+						</td>
+
+						<td class="rightCol">
+							<input id="titleInput" type="text" size="30"/>
+						</td>
+					</tr>
+
+					<!-- PRICE -->
+					<tr id="priceCol">
+						<td class="leftCol">
+							<label class="price" for="priceInput">Price: </label>
+						</td>
+
+						<td class="rightCol">
+							<!-- TODO: Consider text input instead of number input -->
+							<span class="monetary">$</span>
+							<input id="priceInput" class="monetary" type="number" min="0.00" step="1.00" max="2500" value="0"/>
+						</td>
+					</tr>
+
+					<!-- PICTURE -->
+					<tr id="picCol">
+						<td class="leftCol">
+							<label class="pic" for="picInput">Picture: </label>
+						</td>
+
+						<td class="rightCol">
+							<!-- TODO: Regex for URL -->
+							<input id="picInput"  type="text" size="60" placeholder="e.g. http://www.example.com/picture.jpg"/>
+						</td>
+					</tr>
+					
+					<!-- CATEGORY -->
+					<tr id="categories">
+					  <td class="leftCol">
+					    <label class="cat"
+					    for="category">Category:
+					    </label>
+					  </td>
+					  <td class="rightCol">
+					    <select id="category">
+					    </select>
+					  </td>
+					</tr>
+
+					<!-- Gender -->
+					<tr id="genderCol">
+						<td class="leftCol">
+							<label class="gender" for="maleInput">Male? </label>
+						</td>
+
+						<td class="rightCol">
+							<input id="maleInput" type="checkbox"/>&nbsp;
+							<label class="gender" for="maleInput">Female? </label>
+							<input id="femaleInput" type="checkbox"/>
+						</td>
+					</tr>
+					
+					<!-- AVAILABLE IN STORE -->
+					<tr id="availStoreCol">
+						<td class="leftCol">
+							<label class="availStore" for="availStoreInput">Available in-store? </label>
+						</td>
+
+						<td class="rightCol">
+							<input id="availStoreInput" type="checkbox"/>
+						</td>
+					</tr>
+
+					<!-- AVAILABLE TO SHIP -->
+					<tr id="availShipCol">
+						<td class="leftCol">
+							<label class="availShip" for="availShipInput">Available to ship? </label>
+						</td>
+
+						<td class="rightCol">
+							<input id="availShipInput" type="checkbox"/>
+						</td>
+					</tr>
+
+					<!-- URL -->
+					<tr id="urlCol">
+						<td class="leftCol">
+							<label class="url" for="urlInput">Item URL: </label>
+						</td>
+
+						<td class="rightCol">
+							<!-- TODO: Regex check on format of URL -->
+							<input id="urlInput" type="text" size="60" placeholder="e.g. http://www.example.com/item.html"/>
+						</td>
+					</tr>
+
+					<!-- BID PRICE -->
+					<tr id="bidCol">
+						<td class="leftCol">
+							<label class="bid" for="bidInput">Bid Price: </label>
+						</td>
+
+						<td class="rightCol">
+							<!-- TODO: Consider text input instead of number input -->
+							<span class="monetary">$</span>
+							<input id="bidInput" class="monetary" type="number" min="0.01" step="0.01" max="2500" value="0"/>
+						</td>
+					</tr>
+				</table>
+
+			</ul>
+
+			<center>
+	    		<button class="signup_btn" onclick="return submitClick()">Submit</button>
+	    		<button class="signup_btn" onclick="return submitClick()">Cancel</button>
+	    	</center>
+		</form>	
+		<div id="footer">
+			ORCA: Optimized Retail Contextual Advertising
+		</div>
+	</div>
+	</body>
+</html>

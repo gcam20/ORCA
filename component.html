@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+    <title>Embeddable Component</title>
+    <link rel="stylesheet" type="text/css" href="component.css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+
+	<!-- JAVASCRIPT FUNCTIONALITY -->
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+	<script src="http://underscorejs.org/underscore.js"></script>
+	<script type="text/javascript" src="colors.js"></script>
+	<script type-"text/javascript" src="itemMatch.js"></script>
+	<script type="text/javascript" src="databaseController.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript">
+		displayItem();
+	</script>
+</head>
+
+<body>
+
+	<div id="header">Dummy Retail Website</div>
+    <div id="page">
+	    <div id="nav_bar">
+	    	<span class="section">New Releases</span>
+	    	<span class="section_divider"></span>
+	    	<span class="section">Men's</span>
+	    	<span class="section_divider"></span>
+	    	<span class="section">Women's</span>
+	    	<span class="section_divider"></span>
+	    	<span class="section">Shoes</span>
+	    	<span class="section_divider"></span>
+	    	<span class="section">Accessories</span>
+	    </div>
+	    <div id="current_item">
+	    	<a id="current_url" href="">
+	    		<img id="current_item_image"/>
+	    	</a>
+	    </div>
+	    <div id="dummy_text">
+	    	<div id="current_company">Brand</div>
+	    	<div id="current_info">Item Info</div>
+	    	<div id="current_price">$</div>
+	    	<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at mauris dapibus, blandit lorem in, interdum massa. Aliquam ultricies tempus erat quis consequat. Sed semper nisi in lorem volutpat, vel feugiat odio vestibulum. Integer dui purus, lacinia eget ante vel, mollis adipiscing enim.</a><br><br><br><br><br>
+
+	    	<button id="cart_btn">Add to Cart</button>
+
+	    </div>
+
+	    <span>
+			<div id="suggestion_text">You may also like:</div>
+		    <div id="component_border">
+		        <div class="item_container">
+				    <a id="url1" href="">
+				        <img id="img1" class="image"/>
+				    </a>
+				    <div class="text_container">
+					    <div id="company1" class="company_title">Brand</div>
+					    <div id="info1" class="item_info">Item Info</div>
+					    <div class="bottom_row">
+						    <span id="price1" class="price_text">$</span>&nbsp;|&nbsp;
+						    <span class="size_shoes">Click to see sizes</span>
+						</div>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="item_container">
+				    <a id="url2" href="">
+				        <img id="img2" class="image"/>
+				    </a>
+				    <div class="text_container">
+					    <div id="company2" class="company_title">Brand</div>
+					    <div id="info2" class="item_info">Item Info</div>
+					    <div class="bottom_row">
+						    <span id="price2" class="price_text">$</span>&nbsp;|&nbsp;
+						    <span class="size_shoes">Click to see sizes</span>
+						</div>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="item_container">
+				    <a id="url3" href="">
+				        <img id="img3" class="image"/>
+				    </a>
+				    <div class="text_container">
+					    <div id="company3" class="company_title">Brand</div>
+					    <div id="info3" class="item_info">Item Info</div>
+					    <div class="bottom_row">
+						    <span id="price3" class="price_text">$</span>&nbsp;|&nbsp;
+						    <span class="size_shoes">Click to see sizes</span>
+						</div>
+					</div>
+				</div>
+				<span id="orca_text">Ads by ORCA</span>
+			    <span class="footer_logo">
+			    	<img src="img/orca_whale.png" alt="orca_logo" height="12px" />
+			    </span>
+		    </div>
+		</span>
+		<button id="random_btn" onclick="return displayItem();">Random Item</button>
+    	<br>
+		<button id="recent_btn" onclick="return displayRecentItem();">Most Recent Item</button>
+	    
+	</div>
+	<address></address>
+</body> </html>

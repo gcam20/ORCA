@@ -1,0 +1,267 @@
+body
+{
+    background-image: url("img/stardust.png");
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 400;
+}
+
+#page
+{
+    width: 75%;
+    height: 110%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#header
+{
+    width: 100%;
+    font-size: 48px;
+    font-family: 'Pacifico', 'cursive';
+    padding-bottom: 15px;
+    font-style: inherit;
+    text-align: center;
+    background-color: rgba(255, 105, 98, 0.5);
+}
+
+#nav_bar
+{
+    width: 100%;
+    height: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    background-color: rgba(142, 142, 142, 0.5);
+}
+
+.section
+{
+    width: 20%;
+    font-size: 14px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: inherit;
+    text-align: center;
+    padding: 30px;
+}
+
+.section_divider
+{
+    position: absolute;
+    border-right: 1px solid rgba(255, 105, 98, 1.0);
+    margin-top: 4px;
+    height: 16px;
+}
+
+#current_item
+{
+    float: left;
+    display: inline-block;
+    height: 450px;
+    width: 450px;
+    text-align: center;
+}
+
+#current_company
+{
+    font-size: 24px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 700; 
+}
+
+#current_info
+{
+    font-size: 16px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 400; 
+}
+
+#current_price
+{
+    font-size: 18px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 400; 
+}
+
+#current_item_image
+{
+    display: inline-block;
+    max-height: 350px;
+    max-width: 350px;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+#dummy_text
+{
+    margin-left: -50px;
+    font-size: 12px;
+    width: 180px;
+    display: inline-block;
+    position: absolute;
+    left: 55%;
+    bottom: 30%;
+    text-align: left;
+}
+
+button
+{
+    background-image:url("img/black_btn.jpg");
+    border: none;
+    height: 30px;
+    color: white;
+}
+
+#cart_btn
+{
+    width: 180px;
+    height: 45px;
+    font-size: 14px;
+}
+
+#suggestion_text
+{
+    position: relative;
+    float: right;
+    right: 50px;
+    width: 150px;
+    font-size: 12px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 400;
+    padding: 2px;
+}
+
+/* Component Code */
+
+#component_border
+{
+    position: relative;
+    float: right;
+    right: -100px;
+    top: 16px;
+    width: 150px;
+    height: 452px;
+    border: 1px dotted #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.divider
+{
+    border-bottom: 1px dotted #ccc;
+    clear: both;
+    display: inline-block;
+    width: 75px;
+}
+
+.item_container
+{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+.image
+{
+    position: absolute;
+    max-width: 84px;
+    max-height: 84px;
+    left: 24.5%;
+    top: 4%;
+    padding: 2px;
+    text-align: center;
+}
+
+#random_btn
+{
+    margin-left: 30px;
+    position: absolute;
+    left: 24%;
+    top: 105%;
+    margin-top: 0px;
+    width: 130px;
+}
+
+#recent_btn
+{
+    margin-left: 20px;
+    position: absolute;
+    left: 24%;
+    top: 110%;
+    margin-top: 0px;
+    width: 150px;
+}
+
+.text_container
+{
+    position: absolute;
+    width: 144px;
+    left: 3px;
+    top: 94px;
+    font-size: 11px;
+}
+
+.company_title
+{
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item_info
+{
+    width: 100%;
+    padding: 2px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price_text
+{
+    font-weight: bold;
+    width: 100%;
+    padding: 2px;
+    color: #E42217;
+}
+
+#orca_text
+{
+    float: left;
+    padding: 4px;
+    font-size: 8px;
+    text-color: #AAAAAA;
+    vertical-align: middle;
+}
+
+.footer_logo
+{
+    float: left;
+    margin-top: 2px;
+}
+
+.size_true
+{
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.size_false
+{
+    font-size: 11px;
+    color: #BEBEBE;
+}
+
+.size_shoes
+{
+    font-size: 9px;
+    color: #BEBEBE;
+}

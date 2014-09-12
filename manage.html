@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Manage Items | ORCA</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+
+<!-- JAVASCRIPT FUNCTIONALITY -->
+<script type="text/javascript" src="manage.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="validations.js"></script>
+<script type="text/javascript" src="databaseController.js"></script>
+<script type="text/javascript" src="getColor.js"></script>
+<script type="text/javascript" src="logout.js"></script>
+
+<script type="text/javascript">
+	loadItemsToTable();
+</script>
+
+<!-- HTML MARKUP -->
+</head>
+<body id="main_body" >
+	<div id="form_container">
+	
+		<h1>
+			<a>
+				<span class="logo_container">
+					<img id="logoWhaleImg" src="img/orca_whale.png" onclick="return logoClick()" alt="ORCA_whale" height="30px"/> 
+					<img id="logoTextImg" src="img/orca_text.png" onclick="return logoClick()" alt="ORCA" height="33px" align="top"/>
+				</span>
+				<span class="logout_container_span">
+					<a class="logout_container" onclick="return logout()">LOG OUT</a>
+				</span>
+			</a>
+		</h1>
+
+		<form id="page" class="appnitro"  method="post" action="">
+			<div class="form_description">
+				<h2>Manage Listed Items </h2>
+			</div>
+
+			<label><b>Please select an item from the table below to edit: <br></b></label>
+
+			<TABLE id="itemTable" class="manage_items_table" width="700px" border="1">
+	        	<THEAD>        
+			    <TR>
+			      <TH>Brand</TH><TH>Title</TH><TH>Bid</TH><TH>Price</TH><TH>Edit</TH>
+			    </TR>
+			  </THEAD>
+   		 </TABLE>
+
+		</form>	
+		<div id="footer">
+			ORCA: Optimized Retail Contextual Advertising
+		</div>
+	</div>
+	</body>
+</html>
